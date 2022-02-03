@@ -18,27 +18,27 @@ export default class HomeNavigator extends React.Component {
 
                 <Stack.Screen
 
-                    name="Home"
+                    name="Accueil"
                     component={Accueil}
-                    options={{ title: 'Accueil', headerShown: false }}
+                    options={{ title: 'Accueil', headerShown: true, headerTintColor: '#3DA6FF' }}
                 />
                 <Stack.Screen
 
                     name="Recherche"
                     component={Recherche}
-                    options={{ title: 'Recherche de Film', headerShown: false }}
+                    options={{ title: 'Recherche de Film', headerShown: true }}
                 />
                 <Stack.Screen
 
                     name="ListFilm"
                     component={ListFilm}
-                    options={{ title: 'Liste Des Film Rechercher', headerShown: false }}
+                    options={{ title: 'Liste Des Film Rechercher', headerShown: true }}
                 />
                 <Stack.Screen
 
                     name="DetailsFilm"
                     component={DetailsFilm}
-                    options={{ title: 'Details Film', headerShown: false }}
+                    options={{ title: 'Details Film', headerShown: true }}
                 />
 
 

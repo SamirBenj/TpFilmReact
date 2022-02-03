@@ -1,5 +1,5 @@
-import react from "react";
-import { View, StyleSheet, Pressable, Text } from 'react-native';
+import React from "react";
+import { View, StyleSheet, Pressable, Text, TouchableOpacity } from 'react-native';
 
 
 const Accueil = ({ navigation }) => {
@@ -7,7 +7,7 @@ const Accueil = ({ navigation }) => {
         <View style={styles.container}>
 
             <Text style={styles.txt}>Bienvenue sur mon Application </Text>
-            <Pressable onPress={() => {
+            <TouchableOpacity onPress={() => {
                 navigation.navigate('Recherche');
             }}>
 
@@ -20,7 +20,7 @@ const Accueil = ({ navigation }) => {
 
                     </View>
                 </View>
-            </Pressable >
+            </TouchableOpacity >
         </View >
 
     );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, View, TextInput, Pressable, Text } from 'react-native';
 
 const Form = ({ navigation }) => {
     const [myValueFilm, setValueFilm] = useState('');
@@ -17,6 +17,13 @@ const Form = ({ navigation }) => {
                     nomFilm: myValueFilm,
                 })
             }}>
+                <View style={{ borderRadius: 15, backgroundColor: '#6CBAFC', padding: 5, top: 50 }}>
+
+                    <Text style={styles.txtBouton}>
+                        Rechercher
+                    </Text>
+
+                </View>
             </Pressable>
         </View >
     );
@@ -26,6 +33,10 @@ const styles = StyleSheet.create({
     txtInput: {
         borderRadius: 15,
         fontWeight: 'bold',
+        borderWidth: 1,
+        width: 250,
+        height: 60,
+        color: 'white',
     },
     Container: {
         flex: 1,
@@ -34,6 +45,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
+    },
+    txtBouton: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'white',
+
     }
 })
 

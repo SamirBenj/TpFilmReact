@@ -9,3 +9,5 @@ const DetailsFilm = () => {
     );
 
 }
+
+export default DetailsFilm
