@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import View from "react-native";
+import {View,FlatList , Pressable} from "react-native";
 
-const ListFilm = () => {
+const ListFilm = ({navigation}) => {
     const [isLoading, setLoading] = useState(false);
     const [data, setData] = useState([]);
     const [isShowWidget, setShowData] = useState();
