@@ -25,10 +25,10 @@ const ListFilm = ({ navigation }) => {
     }, []);
 
     return (
-        <View style={styles.mainContainer}>
+        <View style={styles.container}>
             <View style={styles.card}>
             </View>
-            <View style={styles.bottomContainer}>
+            <View style={styles.container2}>
                 <View style={{ flex: 1, padding: 30 }}>
                     {isLoading ? <Text>chargement en cours ....</Text> :
                         <FlatList
@@ -57,7 +57,7 @@ const ListFilm = ({ navigation }) => {
 
 
 const styles = StyleSheet.create({
-    mainContainer: {
+    container: {
         flex: 1,
         backgroundColor: 'blue',
     },
@@ -66,6 +66,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         shadowColor: 'black',
         padding: 30,
+
+    },
+    container2: {
+        borderTopRightRadius: 40,
+        borderTopLeftRadius: 40,
+        alignItems: 'center',
+        backgroundColor: 'white',
 
     }
 })
