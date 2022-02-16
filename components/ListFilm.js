@@ -52,7 +52,7 @@ const ListFilm = ({ navigation }) => {
             </View>
         </View>
     );
-}
+};
 
 
 
