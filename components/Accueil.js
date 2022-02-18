@@ -11,8 +11,8 @@ const Accueil = ({ navigation }) => {
                 navigation.navigate('Recherche');
             }}>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'flex-end', width: '100%', paddingRight: 15 }}>
-                    <View style={{ borderRadius: 15, backgroundColor: '#6CBAFC', padding: 5, top: 320 }}>
+                <View >
+                    <View >
 
                         <Text style={styles.txtBouton}>
                             Entrer
@@ -26,7 +26,8 @@ const Accueil = ({ navigation }) => {
     );
 };
 
-
+//style={{ borderRadius: 15, backgroundColor: '#6CBAFC', padding: 5, top: 320 }}
+//style={{ flexDirection: 'row', justifyContent: 'flex-end', width: '100%', paddingRight: 15 }}
 
 
 

@@ -1,39 +1,36 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React from "react";
+import { StyleSheet, TouchableWithoutFeedback, View, Image, Text } from "react-native";
 
-const ItemRow = ({ item }) => {
+export const ItemRow = (props) => {
+    const onPressItemList = () => {
+        props.navigate.navigation.navigate('ListFilm', { item: props.item })
+    }
+
     return (
-        <View style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: 20,
-            margin: 20,
-            width: 300,
-            borderRadius: 30,
-            backgroundColor: '#3DA6FF',
-        }}>
+        <TouchableWithoutFeedback onPress={onPressItemList}>
+            <View style={styles.container}>
 
-            <Image
-                style={styles.afficheFilm}
-                source={{ uri: `https://s2.coinmarketcap.com/static/img/coins/64x64/${item.item.imdbID}.png` }}></Image>
-            <View style={{ flexDirection: 'column', padding: 10, borderRadius: 20 }}>
-                <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>{item.item.Title}</Text>
-                <Text style={{ color: 'orange', fontWeight: 'bold', fontSize: 20 }}>{item.item.Year}</Text>
-                <Text style={{ color: 'orange', fontWeight: 'bold', fontSize: 20 }}>{item.item.Type}</Text>
-                <Text style={{ color: 'orange', fontWeight: 'bold', fontSize: 20 }}>{item.item.Poster}</Text>
+                <Image
+                    styles={{ width: 40, height: 40 }}
+                    source={{ uri: 'http://www.omdbapi.com/?i=$id&apikey=5edd8232' + props.item.id + '.png' }}
+
+                />
+
+                <Text>{props.item.Title}</Text>
 
             </View>
-
-        </View>
-    );
+        </TouchableWithoutFeedback>
+    )
 }
 
 const styles = StyleSheet.create({
-    afficheFilm: {
-        width: 40,
-        height: 40,
-
-
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        padding: 5,
+        alignItems: 'center',
+        borderBottomWidth: 2
     }
 });
-export default ItemRow;
+
+export default ItemRow

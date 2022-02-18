@@ -17,7 +17,7 @@ const Form = ({ navigation }) => {
                     nomFilm: myValueFilm,
                 })
             }}>
-                <View style={{ borderRadius: 15, backgroundColor: '#6CBAFC', padding: 5, top: 50 }}>
+                <View >
 
                     <Text style={styles.txtBouton}>
                         Rechercher
@@ -28,7 +28,7 @@ const Form = ({ navigation }) => {
         </View >
     );
 }
-
+//style={{ borderRadius: 15, backgroundColor: '#6CBAFC', padding: 5, top: 50 }}
 const styles = StyleSheet.create({
     txtInput: {
         borderRadius: 15,

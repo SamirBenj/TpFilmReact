@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, FlatList, Pressable, StyleSheet } from "react-native";
-import ItemRow from "./Items";
+import { ItemRow } from "./Items";
 
 const ListFilm = ({ navigation }) => {
     const [isLoading, setLoading] = useState(true);
