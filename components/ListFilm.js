@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, FlatList, Pressable, StyleSheet, Text } from "react-native";
 import { ItemsCard } from './Items';
 
@@ -7,7 +7,7 @@ const ListFilm = ({ route }, { navigation }) => {
     console.log(nomFilm);
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState();//données Film
-    const url = `http://www.omdbapi.com/?s=${myValueFilm}&apikey=5edd8232`;
+    const url = `http://www.omdbapi.com/?s=${nomFilm}&apikey=5edd8232`;
 
     useEffect(() => {
 
@@ -35,6 +35,7 @@ const ListFilm = ({ route }, { navigation }) => {
                 <View style={{ flex: 1, padding: 30 }}>
                     {isLoading ? <Text>chargement en cours ....</Text> :
                         <FlatList
+                            data={data}
                             renderItem={(item) =>
                                 <Pressable
                                     onPress={() => {
@@ -46,7 +47,7 @@ const ListFilm = ({ route }, { navigation }) => {
                                         }
                                         )
                                     }}>
-                                    <ItemRow item={item}></ItemRow>
+                                    <Text></Text>
                                 </Pressable>
                             }>
                         </FlatList>
