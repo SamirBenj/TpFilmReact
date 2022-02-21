@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, FlatList, Pressable, StyleSheet, Text } from "react-native";
 import { ItemsCard } from './Items';
 
-const ListFilm = ({ root }, { navigation }) => {
+const ListFilm = ({ route }, { navigation }) => {
     const { nomFilm } = route.params;
     console.log(nomFilm);
     const [isLoading, setLoading] = useState(true);
