@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { View, FlatList, Pressable, StyleSheet } from "react-native";
-import { ItemRow } from "./Items";
+import { View, FlatList, Pressable, StyleSheet, Text } from "react-native";
+import { ItemsCard } from './Items';
 
 const ListFilm = ({ navigation }) => {
     const [isLoading, setLoading] = useState(true);
@@ -27,6 +27,7 @@ const ListFilm = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
+                <Text>Ceci est un teste</Text>
             </View>
             <View style={styles.container2}>
                 <View style={{ flex: 1, padding: 30 }}>
