@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { View, FlatList, Pressable, StyleSheet, Text } from "react-native";
 import { ItemsCard } from './Items';
 
-const ListFilm = ({ navigation }) => {
+const ListFilm = ({ root }, { navigation }) => {
+    const { nomFilm } = route.params;
+    console.log(nomFilm);
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState();//données Film
     const url = `http://www.omdbapi.com/?s=${myValueFilm}&apikey=5edd8232`;

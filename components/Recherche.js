@@ -9,7 +9,10 @@ const Form = ({ navigation }) => {
 
             <TextInput style={styles.txtInput}
                 placeholder='Entrer votre film '
-                onChangeText={(value) => { setValueFilm(value); }}
+                onChangeText={(value) => {
+                    setValueFilm(value);
+                    value = { myValueFilm }
+                }}
             />
 
             <Pressable onPress={() => {
