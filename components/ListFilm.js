@@ -47,7 +47,7 @@ const ListFilm = ({ route }, { navigation }) => {
                                         }
                                         )
                                     }}>
-                                    <Text></Text>
+                                    <Text>{item.Year}</Text>
                                 </Pressable>
                             }>
                         </FlatList>
