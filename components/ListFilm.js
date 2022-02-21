@@ -36,7 +36,7 @@ const ListFilm = ({ route }, { navigation }) => {
                     {isLoading ? <Text>chargement en cours ....</Text> :
                         <FlatList
                             data={data}
-                            renderItem={(item) =>
+                            renderItem=({item})=>
                                 <Pressable
                                     onPress={() => {
                                         navigation.navigate('DetailsPage', {
@@ -46,7 +46,7 @@ const ListFilm = ({ route }, { navigation }) => {
                                             genreFilm: item.item.Type
                                         }
                                         )
-                                    }}>
+                                    }>
                                     <Text>{item.Year}</Text>
                                 </Pressable>
                             }>
